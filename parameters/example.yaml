@@ -1,0 +1,5 @@
+input_mip: "/Users/mrestrep/projects/borton/calacium_images/example_data/Preprocessedfiles/MAX_6_2_2_24_10x_4minadjust.tif"
+output_base_path: "/Users/mrestrep/projects/borton/calacium_images/example_data/python_output"
+threshold_block_size: 5
+threshold_fraction_above_mean: .02
+blobs_log_thresh: 0.03

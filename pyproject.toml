@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "calcium-roi-analysis"
+version = "0.1.0"
+description = ""
+authors = ["Isabel Restrepo <isabelrestre@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+scikit-image = "^0.17.2"
+napari = "^0.3.1"
+PyQt5 = "^5.14.2"
+pyyaml = "^5.3.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+ipykernel = "^5.2.1"
+jupyterlab = "^2.1.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
