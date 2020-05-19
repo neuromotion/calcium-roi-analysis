@@ -1,6 +1,8 @@
 #poetry lock
 poetry.lock
 
+#current paramenter file
+parameters/current.yaml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
