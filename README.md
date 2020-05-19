@@ -63,9 +63,7 @@ This will create a hidden file `.python-version` in the current directory.
 
 4. Jupyter -- Skip if using VSCode (highly recommended)
 
-We will install Jupyter in it's own environment using `pipx`
-
-`pipx install jupyter --include-deps`
+It is included as dev dependency of napari
 
 5. Poetry
 
@@ -81,6 +79,22 @@ Poetry handles dependency- and virtual-environment-management in a way that’s 
 
 `poetry env use $(pyenv which python)`
 
-### Install ipython kernel spec
+# Getting Started
+
+## Install the package dependencies using Poetry
+
+Within the urrent directory of your package, run
+
+`poetry install`
+
+## Install ipython kernel spec
 
 `poetry run python -m ipykernel install --user --name=calcium-roi-analysis`
+
+## Open the sample notebook
+
+If you are using vscode with the Python plugin, you should be able to connect to the kernel in the current vitual environment.
+
+Alternatively, you can fireup Jupyter Lab
+
+`poetry run jupyter-lab`
