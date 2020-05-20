@@ -98,3 +98,37 @@ If you are using vscode with the Python plugin, you should be able to connect to
 Alternatively, you can fireup Jupyter Lab
 
 `poetry run jupyter-lab`
+
+## Version control
+
+### Git Overview
+
+Git is a version control system that enables you to track changes to files. With Git, you are able to revert files back to previous versions, restore deleted files, remove added files and even track down where a particular line of code was introduced.
+
+Git creates a hidden `.git` folder \(in the current folder\) to store the details of the file system - this folder contains all the data required to track your files and is known as a **repository**, or repo.
+
+Git tracks file changes by the user creating a _save point_, or in Git terms a **commit**. Each commit takes a snapshot of the current file system. Commits are uniquely identified by a SHA–1 hash. This is a 40 character string which may along the lines of `ded7a0db6422d59e9893e975e32275fc36f853da`This hash can be used to track a particular commit within the repository.
+
+Nearly all operations that are performed by Git are in you local computing environment, for the exception of few used purly to synchronize with a remote. Some of the most common git operations are depicted below. In summary a typical flow consists of making changes to your files, _staging_ them via `git add`, marking a save point via `git commit`, then finally syncing to your remote \(e.g., GitHub\) via `git push`. If you are pushing changes to your remote from multiple places, you can bring changes your most recent version usin `git pull`, which is the equivalent of doing `git fetch` followed by a `git merge` operation
+
+![](https://github.com/brown-ccv/jupyterhub-user-manual/tree/master/.gitbook/assets/git-basics.png)
+
+### Cheatsheet
+
+| Command                       | Brief                                                              |
+| :---------------------------- | :----------------------------------------------------------------- |
+| git add &lt;files&gt;         | add a file to next commit \(stage\)                                |
+| git commit -m &lt;message&gt; | commit staged files                                                |
+| git push                      | upload staged commit to repo                                       |
+| git pull                      | get remote repo commits and download \(try and resolve conflicts\) |
+| git clone &lt;url&gt;         | download entire repository                                         |
+
+### Working with Jupyter Notebooks
+
+Jupyter Notebooks are inheritely messy to work with git. The reason is that the notebook format includes all the output cells and makes it defficult to view what has changed in the code.
+
+This project includes `nbdime` a tool that facilitates seeing the difference in the changes. To do so call
+
+`poetry run nbdiff-web` or `poetry run nbdiff`
+
+If working within jupyter-lab, an extension is enabled to see the differences
