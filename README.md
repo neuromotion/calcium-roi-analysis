@@ -111,7 +111,7 @@ Git tracks file changes by the user creating a _save point_, or in Git terms a *
 
 Nearly all operations that are performed by Git are in you local computing environment, for the exception of few used purly to synchronize with a remote. Some of the most common git operations are depicted below. In summary a typical flow consists of making changes to your files, _staging_ them via `git add`, marking a save point via `git commit`, then finally syncing to your remote \(e.g., GitHub\) via `git push`. If you are pushing changes to your remote from multiple places, you can bring changes your most recent version usin `git pull`, which is the equivalent of doing `git fetch` followed by a `git merge` operation
 
-![](https://github.com/brown-ccv/jupyterhub-user-manual/tree/master/.gitbook/assets/git-basics.png)
+![](git-basics.png)
 
 ### Cheatsheet
 
