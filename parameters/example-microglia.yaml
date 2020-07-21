@@ -1,0 +1,6 @@
+input_tiff_dir: ""/Users/mrestrep/projects/borton/calacium_images/sophie_data/tiffs""
+output_base_path: "/Users/mrestrep/projects/borton/calacium_images/sophie_data/julia_output"
+raduis:
+  - 5.0
+  - 7.0
+  - 9.0

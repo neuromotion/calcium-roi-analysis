@@ -132,3 +132,44 @@ This project includes `nbdime` a tool that facilitates seeing the difference in 
 `poetry run nbdiff-web` or `poetry run nbdiff`
 
 If working within jupyter-lab, an extension is enabled to see the differences
+
+## Setting up Julia
+
+1. Download [Julia](https://julialang.org]
+
+2. Install the Julia dependencies
+
+Run the following commands at the root of the project:
+```
+$ julia
+$ ]
+pkg> activate .
+pkg> update
+```
+
+## Fix IJulia and PyCall
+
+We want Julia to use the the Python and Jupyter installed in our Poetry environment. 
+
+0. Reinstall PyEnv's version of python with needed environment variable set. See [this issue](https://github.com/JuliaPy/PyCall.jl/issues/597) for more info
+
+```
+pyenv uninstall 3.8.1
+env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.8.1
+```
+
+1. Tell julia to use, the virtualenv in poetry
+
+```
+ENV["PYTHON"]="/Users/mrestrep/projects/borton/calcium-roi-analysis/.venv/bin/python
+ENV["JUPYTER"]="/Users/mrestrep/projects/borton/calcium-roi-analysis/.venv/bin/jupyter"
+
+```
+
+2. Add or build `PyCall` and `IJulia`
+
+```
+using Pkg
+Pkg.build("PyCall")
+Pkg.build("IJulia")
+```
