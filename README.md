@@ -85,6 +85,10 @@ Poetry handles dependency- and virtual-environment-management in a way that’s 
 
 Within the urrent directory of your package, run
 
+`poetry update`
+
+Then
+
 `poetry install`
 
 ## Install ipython kernel spec
