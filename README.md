@@ -85,6 +85,10 @@ Poetry handles dependency- and virtual-environment-management in a way that’s 
 
 Within the urrent directory of your package, run
 
+`poetry update`
+
+Then
+
 `poetry install`
 
 ## Install ipython kernel spec
@@ -93,7 +97,8 @@ Within the urrent directory of your package, run
 
 ## Open the sample notebook
 
-If you are using vscode with the Python plugin, you should be able to connect to the kernel in the current vitual environment.
+If you are using vscode with the Python plugin, you should be able to connect to the kernel in the current virtual environment.
+Make sure that you select the python kernel we created, named calcium-roi-analysis
 
 Alternatively, you can fireup Jupyter Lab
 
@@ -132,3 +137,11 @@ This project includes `nbdime` a tool that facilitates seeing the difference in 
 `poetry run nbdiff-web` or `poetry run nbdiff`
 
 If working within jupyter-lab, an extension is enabled to see the differences
+
+###  Running find_roi.ipynb
+Start by making sure you have an input image, and that your yaml file has the correct file path to that input image. 
+
+After selecting the calcium-roi-analysis kernel, you can hit run all to execute all of the code blocks sequentially. After a short while, a window should pop up with an output image. Click on the image and press the f key on your keyboard to save that image to your output file. 
+
+After the image has been saved, you can run the next block of code, which probably failed as it relies on that image being created. 
+

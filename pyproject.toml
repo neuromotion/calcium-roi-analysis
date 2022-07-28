@@ -6,10 +6,21 @@ authors = ["Isabel Restrepo <isabelrestre@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-scikit-image = "^0.17.2"
-napari = "^0.3.1"
+scikit-image = "^0.19.1"
+napari = {extras = ["all"], version = "^0.4.16"}
+napari-console = "^0.0.4"
+napari-plugin-engine = "^0.1.9"
+napari-svg = "^0.1.5"
 PyQt5 = "^5.14.2"
 pyyaml = "^5.3.1"
+vispy = "^0.10.0"
+magicgui = "^0.3.6"
+jsonschema = "^3.2.0"
+pydantic = "^1.8.2"
+PyOpenGL = "^3.1.5"
+pooch = "^1.0.0"
+matplotlib = "^3.5.2"
+imagecodecs = "^2022.2.22"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
